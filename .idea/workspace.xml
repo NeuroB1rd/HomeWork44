@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bab4a97d-1167-46ed-9f7c-0b5a2b5df87f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FirstTask/MyHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FirstTask/MyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FirstTask/Node.java" afterDir="false" />
+    <list default="true" id="bab4a97d-1167-46ed-9f7c-0b5a2b5df87f" name="Changes" comment="Not finished">
+      <change afterPath="$PROJECT_DIR$/src/FirstTask/TestMyArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FirstTask/TestMyHashMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FirstTask/TestMyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homeWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homeWork.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstTask/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTask/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstTask/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTask/MyHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstTask/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTask/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstTask/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstTask/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,19 +36,111 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;task1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "task1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="JUnit.TestMyHashMap">
+    <configuration name="TestMyArrayList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homeWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FirstTask.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="FirstTask" />
+      <option name="MAIN_CLASS_NAME" value="FirstTask.TestMyArrayList" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMyArrayList.testLargeCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homeWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FirstTask.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="FirstTask" />
+      <option name="MAIN_CLASS_NAME" value="FirstTask.TestMyArrayList" />
+      <option name="METHOD_NAME" value="testLargeCapacity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMyArrayList.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homeWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FirstTask.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="FirstTask" />
+      <option name="MAIN_CLASS_NAME" value="FirstTask.TestMyArrayList" />
+      <option name="METHOD_NAME" value="testRemove" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMyHashMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homeWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FirstTask.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="FirstTask" />
+      <option name="MAIN_CLASS_NAME" value="FirstTask.TestMyHashMap" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMyLinkedList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homeWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="FirstTask.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="FirstTask" />
+      <option name="MAIN_CLASS_NAME" value="FirstTask.TestMyLinkedList" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestMyHashMap" />
+        <item itemvalue="JUnit.TestMyArrayList" />
+        <item itemvalue="JUnit.TestMyLinkedList" />
+        <item itemvalue="JUnit.TestMyArrayList.testRemove" />
+        <item itemvalue="JUnit.TestMyArrayList.testLargeCapacity" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,8 +151,17 @@
       <updated>1702996429255</updated>
       <workItem from="1702996430297" duration="3327000" />
       <workItem from="1703075579861" duration="6081000" />
-      <workItem from="1703171460535" duration="8634000" />
+      <workItem from="1703171460535" duration="18164000" />
     </task>
+    <task id="LOCAL-00001" summary="Not finished">
+      <option name="closed" value="true" />
+      <created>1703189886741</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703189886741</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,5 +189,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Not finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Not finished" />
   </component>
 </project>

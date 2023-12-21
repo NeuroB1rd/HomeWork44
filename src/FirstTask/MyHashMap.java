@@ -14,13 +14,14 @@ import java.util.Iterator;
 */
 
 public class MyHashMap<K, V> {
-    private int def_capacity = 16;
+    private int DEF_CAPACITY = 16;
+    private static final double LOAD_FACTOR = 0.75;
     private MyLinkedList<K, V>[] buckets;
 
     //конструктор без аргументов
     public MyHashMap(){
-        buckets = new MyLinkedList[def_capacity];
-        for(int i = 0; i < def_capacity; i++){
+        buckets = new MyLinkedList[DEF_CAPACITY];
+        for(int i = 0; i < DEF_CAPACITY; i++){
             buckets[i] = new MyLinkedList<>();
         }
     }
@@ -30,17 +31,60 @@ public class MyHashMap<K, V> {
         for(int i = 0; i < capacity; i++){
             buckets[i] = new MyLinkedList<>();
         }
-        def_capacity = capacity;
+        DEF_CAPACITY = capacity;
     }
+    //получаем id из хэш
     private int idFromHash(K key){
-        return key.hashCode() % def_capacity;
+        return key.hashCode() % DEF_CAPACITY;
     }
-    public void put(K key, V value){
+    //метод изменения размера
+    public void resize(int newCapacity) {
+        MyLinkedList<K, V>[] newBuckets = new MyLinkedList[newCapacity];
+        //инициализируем каждый новый бакет
+        for (int i = 0; i < newCapacity; i++) {
+            newBuckets[i] = new MyLinkedList<>();
+        }
+        //перераспределяем с новым размером
+        for (MyLinkedList<K, V> bucket : buckets) {
+            for (Node<K, V> node : bucket) {
+                int newIndex = node.key.hashCode() % newCapacity;
+                newBuckets[newIndex].add(node.key, node.value);
+            }
+        }
+
+        buckets = newBuckets;
+        DEF_CAPACITY = newCapacity;
+    }
+    //количество элементов
+    public int size() {
+        int size = 0;
+        for (MyLinkedList<K, V> bucket : buckets) {
+            size += bucket.size();
+        }
+        return size;
+    }
+    //количество бакетов
+    public int getCountBackets(){
+        int count = 0;
+        for (MyLinkedList<K, V> bucket : buckets) {
+            count++;
+        }
+        return count;
+    }
+
+    public void put(K key, V value) {
         int index = idFromHash(key);
-        buckets[index].add(key,value);
+        //при вставке в бакет проверяем не перегружен ли он, если перегружен то изменяем размер таблицы
+        if (buckets[index].size() >= DEF_CAPACITY * LOAD_FACTOR) {
+            int newCapacity = DEF_CAPACITY * 2;
+            resize(newCapacity);
+        }
+        buckets[index].add(key, value);
     }
+
     public V get(K key){
         int index = idFromHash(key);
+        //идем по бакету и ищем нужный элемент
         for(Node<K, V> node : buckets[index]){
             if(node.key.equals(key)) {
                 return node.value;

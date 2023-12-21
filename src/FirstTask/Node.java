@@ -1,4 +1,7 @@
 package FirstTask;
+
+import jdk.internal.org.objectweb.asm.tree.analysis.Value;
+
 /**
  * Node для MyLinkedList.
  */
@@ -10,5 +13,9 @@ public class Node<K, V> {
     public Node(K key, V value){
         this.key = key;
         this.value = value;
+    }
+
+    public V getValue() {
+        return value;
     }
 }

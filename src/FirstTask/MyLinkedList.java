@@ -12,6 +12,7 @@ import java.util.NoSuchElementException;
 public class MyLinkedList<K, V> implements Iterable<Node<K, V>> {
     //Первая нода в списке
     private Node<K, V> last;
+    private int size = 0;
 
     //Добавляение элемента. Ссылка на предыдущий элемент записывается в поле нового,
     // а ссылка на новый элемент становиться последней
@@ -19,6 +20,7 @@ public class MyLinkedList<K, V> implements Iterable<Node<K, V>> {
         Node<K, V> newNode = new Node<>(key, value);
         newNode.next = last;
         last = newNode;
+        size++;
     }
     //Поиск элемента.В промежуточное поле кладем ссылку на последний элемент
     // и идем по списку пока не найдем нужный
@@ -37,24 +39,33 @@ public class MyLinkedList<K, V> implements Iterable<Node<K, V>> {
         //Если не нашли возвращаем null
         return null;
     }
+    //получаем последний элемент связанного листа
+    public Node<K, V> getLast(){
+        return this.last;
+    }
 
     public void remove(K key){
         Node<K, V> current = last;
         Node<K, V> buf = null;
 
-        while(current != null && !current.key.equals(key)){
+        //ищем нужный узел
+        while (current != null && !current.key.equals(key)) {
             buf = current;
             current = current.next;
         }
-
-        if(current != null){
-            if(buf != null){
-                last = current.next;
-            }else{
+        //проверяем не первый ли это узел списка
+        if (current != null) {
+            if (buf != null) {
+                //перестраиваем связь в списке
                 buf.next = current.next;
+            } else {
+                //обновляем ссылку на начало списка
+                last = current.next;
             }
+            size--;
         }
     }
+    //переопределяем итератор для использования foreach
     @Override
     public Iterator<Node<K, V>> iterator() {
         return new Iterator<Node<K, V>>() {
@@ -77,4 +88,7 @@ public class MyLinkedList<K, V> implements Iterable<Node<K, V>> {
         };
     }
 
+    public int size() {
+        return size;
+    }
 }
